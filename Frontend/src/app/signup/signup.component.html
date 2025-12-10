@@ -1,0 +1,56 @@
+<div fxLayoutAlign="center" class="mainDiv">
+    <mat-card fxFlex="40" style="margin: 20px;text-align: center;">
+        <h1 id="HeaderStyle">Sign Up</h1>
+        <form style="background-color: white;padding: 20px;"  fxLayoutAlign="stretch" fxLayout="column" [formGroup]="signupForm" (ngSubmit)="signUp()">
+            
+                
+                <input class="inputStyle" matInput type="text" formControlName="name" placeholder="Name" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="name.invalid && name.touched">At least 3 Characters of Name is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="date" formControlName="dob" placeholder="dd-mm-yyyy" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="dob.invalid && dob.touched">DOB  is required</div><br><br>
+            
+                <span style="text-align: center;">Gender : 
+                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Male" required>Male</span>
+                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Female" required>Female</span>
+                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Other" required>Other</span>
+                </span>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="gender.invalid && gender.touched">Gender is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="email" formControlName="email" placeholder="Email" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="email.invalid && email.touched">Email is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="text" formControlName="address" placeholder="Address" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="address.invalid && address.touched">At least 3 Characters of Address is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="number" formControlName="pincode" placeholder="Pincode" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pincode.invalid && pincode.touched">Valid Pincode is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="text" formControlName="city" placeholder="City" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="city.invalid && city.touched">At least 3 Characters of City is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="text" formControlName="state" placeholder="State" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="state.invalid && state.touched">At least 3 Characters of State is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="number" formControlName="card" placeholder="login id" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="card.invalid && card.touched">16 digit login id Number is required</div><br><br>
+            
+                <input class="inputStyle" matInput type="number" formControlName="pin" placeholder="Pin" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pin.invalid && pin.touched">8 digit Pin is required</div><br><br>
+            
+            
+                <input class="inputStyle" matInput type="text" formControlName="pan" placeholder="Pan Card" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pan.invalid && pan.touched">Valid Pan Card is required</div><br><br>
+            
+            
+                <input class="inputStyle" matInput type="number" formControlName="aadhar" placeholder="Aadhar" required>
+                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="aadhar.invalid && aadhar.touched">Valid Aadhar is required</div><br><br>
+
+                <input class="inputStyle" matInput type="checkbox" formControlName="gresh">
+                <b style="text-align: center;">I am ready to go.</b><br><br>
+            
+               <pre style="text-align: center;"><span style="color: white;height: 10px;padding: 10px;"><button type="button" mat-raised-button style="background-color: #e63946;color: white;border: 1px solid black;" (click)="back()">Back</button></span>               <button [disabled]="signupForm.invalid" style="background-color: #e63946;color: white;border: 1px solid black;" mat-raised-button type="submit" >Submit Details</button></pre>
+               
+        </form>
+    </mat-card>
+</div>

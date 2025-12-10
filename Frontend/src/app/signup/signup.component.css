@@ -1,0 +1,44 @@
+div mat-card {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#formData{
+    color: red;
+}
+
+.form-text-text-danger{
+    color: red;
+}
+
+.full-width {
+    width: 100vw;
+}
+
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+
+.mainDiv
+{
+    background-color: #5b8e7d;
+    
+}
+
+.inputStyle{
+    border-radius: 100px;
+    width: 400px;
+    margin-left: 45px;
+    height: 30px;
+    text-align: center;
+}
+
+#HeaderStyle{
+    text-align: center;
+    background-color: #f4a259;
+    color: white;
+    border-bottom:1px solid black;
+    padding: 10px;
+}

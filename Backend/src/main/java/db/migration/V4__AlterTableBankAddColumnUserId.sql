@@ -1,0 +1,1 @@
+ALTER table bank add column userId bigint;

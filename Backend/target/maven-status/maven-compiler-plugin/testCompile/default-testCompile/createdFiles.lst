@@ -1,0 +1,7 @@
+controllers\BankControllerTest.class
+controllers\ApiControllerDocTesterTest.class
+controllers\ApplicationControllerTest.class
+controllers\ApiControllerMockTest.class
+controllers\ApplicationControllerFluentLeniumTest.class
+controllers\LoginLogoutControllerTest.class
+controllers\ApiControllerTest.class

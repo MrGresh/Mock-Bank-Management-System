@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="controllers.BankControllerTest" time="2.343" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\bin"/>
+    <property name="java.vm.version" value="25.321-b07"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\gresh\eclipse-workspace\banking-management-system"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\gresh\eclipse-workspace\banking-management-system"/>
+    <property name="java.runtime.version" value="1.8.0_321-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\gresh\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_321\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-18.0.2.1\bin;C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\HP\HP One Agent;C:\Users\gresh\Downloads\libwebp-1.4.0-windows-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\gresh\AppData\Local\Microsoft\WindowsApps;C:\Users\gresh\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\gresh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gresh\AppData\Local\Microsoft\WindowsApps;C:\Users\gresh\Downloads\mongosh-1.6.1-win32-x64\mongosh-1.6.1-win32-x64\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\Users\gresh\AppData\Local\GitHubDesktop\bin;C:\Users\gresh\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\gresh"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="gresh"/>
+    <property name="java.class.path" value="C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_321\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_321"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_321\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\gresh\Desktop\Tool\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="controllers.BankControllerTest" name="test1" time="2.343">
+    <error message="ninja.lifecycle.FailedStartException: org.flywaydb.core.internal.license.FlywayEditionUpgradeRequiredException: Flyway Teams Edition or PostgreSQL upgrade required: PostgreSQL 9.3 is no longer supported by Flyway Community Edition, but still supported by Flyway Teams Edition." type="java.lang.RuntimeException">java.lang.RuntimeException: ninja.lifecycle.FailedStartException: org.flywaydb.core.internal.license.FlywayEditionUpgradeRequiredException: Flyway Teams Edition or PostgreSQL upgrade required: PostgreSQL 9.3 is no longer supported by Flyway Community Edition, but still supported by Flyway Teams Edition.
+	at ninja.utils.NinjaTestServer.&lt;init&gt;(NinjaTestServer.java:169)
+	at ninja.utils.NinjaTestServer.&lt;init&gt;(NinjaTestServer.java:34)
+	at ninja.utils.NinjaTestServer$Builder.build(NinjaTestServer.java:139)
+	at ninja.NinjaTest.startupServerAndBrowser(NinjaTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: ninja.lifecycle.FailedStartException: org.flywaydb.core.internal.license.FlywayEditionUpgradeRequiredException: Flyway Teams Edition or PostgreSQL upgrade required: PostgreSQL 9.3 is no longer supported by Flyway Community Edition, but still supported by Flyway Teams Edition.
+	at ninja.lifecycle.LifecycleRegister.invokeTarget(LifecycleRegister.java:103)
+	at ninja.lifecycle.LifecycleRegister.start(LifecycleRegister.java:55)
+	at ninja.lifecycle.LifecycleServiceImpl.start(LifecycleServiceImpl.java:84)
+	at ninja.NinjaDefault.onFrameworkStart(NinjaDefault.java:159)
+	at ninja.Bootstrap.boot(Bootstrap.java:129)
+	at ninja.servlet.NinjaServletListener.createNinjaBootstrap(NinjaServletListener.java:165)
+	at ninja.servlet.NinjaServletListener.getInjector(NinjaServletListener.java:135)
+	at com.google.inject.servlet.GuiceServletContextListener.contextInitialized(GuiceServletContextListener.java:45)
+	at ninja.servlet.NinjaServletListener.contextInitialized(NinjaServletListener.java:86)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:1067)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:572)
+	at org.eclipse.jetty.server.handler.ContextHandler.contextInitialized(ContextHandler.java:996)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:746)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:379)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:910)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:288)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:423)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:387)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at ninja.standalone.NinjaJetty.doStart(NinjaJetty.java:171)
+	at ninja.standalone.AbstractConsole.start(AbstractConsole.java:91)
+	at ninja.standalone.AbstractConsole.start(AbstractConsole.java:35)
+	at ninja.utils.NinjaTestServer.&lt;init&gt;(NinjaTestServer.java:167)
+	... 42 more
+Caused by: org.flywaydb.core.internal.license.FlywayEditionUpgradeRequiredException: Flyway Teams Edition or PostgreSQL upgrade required: PostgreSQL 9.3 is no longer supported by Flyway Community Edition, but still supported by Flyway Teams Edition.
+	at org.flywaydb.core.internal.database.base.Database.ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition(Database.java:127)
+	at org.flywaydb.core.internal.database.postgresql.PostgreSQLDatabase.ensureSupported(PostgreSQLDatabase.java:61)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:188)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:214)
+	at ninja.migrations.flyway.MigrationEngineFlyway.migrate(MigrationEngineFlyway.java:68)
+	at ninja.migrations.MigrationInitializer.start(MigrationInitializer.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at ninja.lifecycle.LifecycleRegister.invokeTarget(LifecycleRegister.java:96)
+	... 68 more
+</error>
+    <system-out>20:25:05.985 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+20:25:06.043 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @865ms to org.eclipse.jetty.util.log.Slf4jLog
+20:25:06.760 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+20:25:06.850 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on &lt;all&gt;:1000, 8443/ssl
+20:25:06.851 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_321-b07
+20:25:06.880 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@3fbfa96{STARTED}
+20:25:06.887 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+20:25:06.889 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+20:25:07.479 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+20:25:07.479 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =&gt;  ninja.template.TemplateEngineJsonP
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =&gt;  ninja.template.TemplateEngineJson
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =&gt;  ninja.template.TemplateEngineXml
+20:25:07.527 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =&gt;  ninja.template.TemplateEngineFreemarker
+20:25:07.528 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =&gt;  ninja.template.TemplateEngineText
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =&gt;  ninja.bodyparser.BodyParserEngineJson
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =&gt;  ninja.bodyparser.BodyParserEnginePost
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =&gt;  ninja.bodyparser.BodyParserEngineXml
+20:25:07.537 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =&gt;  ninja.bodyparser.BodyParserEngineMultipartPost
+20:25:07.539 [main] INFO  ninja.Bootstrap - Ninja injector started in 647 ms.
+20:25:07.589 [main] WARN  ninja.params.ControllerMethodInvoker - Using deprecated non-strict mode for injection of parameters into controller (ninja.strict_argument_extractors = false). This mode will soon be removed from Ninja. Make sure you upgrade your application as soon as possible. More: https://www.ninjaframework.org/documentation/basic_concepts/controllers.html &apos;A note about null and Optional&apos;.
+20:25:07.618 [main] INFO  ninja.RouterImpl - -----------------------------------------------------------------------------
+20:25:07.618 [main] INFO  ninja.RouterImpl - Registered routes
+20:25:07.618 [main] INFO  ninja.RouterImpl - -----------------------------------------------------------------------------
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /setup                             =&gt;  controllers.ApplicationController::setup
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /login                             =&gt;  controllers.LoginLogoutController::login
+20:25:07.618 [main] INFO  ninja.RouterImpl - POST   /login                             =&gt;  controllers.LoginLogoutController::loginPost
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /logout                            =&gt;  controllers.LoginLogoutController::logout
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /article/new                       =&gt;  controllers.ArticleController::articleNew
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /article/{id}                      =&gt;  controllers.ArticleController::articleShow
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /api/{username}/article/{id}.json  =&gt;  controllers.ApiController::getArticleJson
+20:25:07.618 [main] INFO  ninja.RouterImpl - GET    /api/{username}/articles.xml       =&gt;  controllers.ApiController::getArticlesXml
+20:25:07.618 [main] INFO  ninja.RouterImpl - POST   /api/{username}/article.json       =&gt;  controllers.ApiController::postArticleJson
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/{username}/article.xml        =&gt;  controllers.ApiController::postArticleXml
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /assets/webjars/{fileName: .*}     =&gt;  ninja.AssetsController::serveWebJars
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /assets/{fileName: .*}             =&gt;  ninja.AssetsController::serveStatic
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/articles                      =&gt;  controllers.ApiController::getArticlesJson
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getArticleById                =&gt;  controllers.ApiController::getArticleById
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getArticleByTitle/{title}     =&gt;  controllers.ApiController::getArticleByTitle
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getArticleBycontent           =&gt;  controllers.ApiController::getArticleBycontent
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getArticleByTitlecontent      =&gt;  controllers.ApiController::getArticleByTitlecontent
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getArticleByPostedAt          =&gt;  controllers.ApiController::getArticleByPostedAt
+20:25:07.619 [main] INFO  ninja.RouterImpl - PUT    /api/putArticleById                =&gt;  controllers.ApiController::putArticleById
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/article/new                   =&gt;  controllers.ApiController::articleNewPost
+20:25:07.619 [main] INFO  ninja.RouterImpl - DELETE /api/deleteArticleById             =&gt;  controllers.ApiController::deleteArticleById
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getAllBankDetail              =&gt;  controllers.BankController::getAllBankDetail
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/VerifySignUp                  =&gt;  controllers.BankController::getpersonalDetailsByCard
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/postPersonalDetail            =&gt;  controllers.BankController::postPersonalDetail
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/Userlogin                     =&gt;  controllers.BankController::Userlogin
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getBalance                    =&gt;  controllers.BankController::getBalance
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/getMiniStatement              =&gt;  controllers.BankController::getMiniStatement
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/postDeposit                   =&gt;  controllers.BankController::postDeposit
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/postWithdraw                  =&gt;  controllers.BankController::postWithdraw
+20:25:07.619 [main] INFO  ninja.RouterImpl - PUT    /api/pinChange                     =&gt;  controllers.BankController::pinChange
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /api/verifyUser                    =&gt;  controllers.BankController::verifyUser
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/postDepositRecieved           =&gt;  controllers.BankController::postDepositRecieved
+20:25:07.619 [main] INFO  ninja.RouterImpl - POST   /api/postWithdrawTransferred       =&gt;  controllers.BankController::postWithdrawTransferred
+20:25:07.619 [main] INFO  ninja.RouterImpl - GET    /getpersonalDetailsByIdxc          =&gt;  controllers.BankController::getpersonalDetailsByIdxc
+20:25:07.621 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+20:25:07.621 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+20:25:07.624 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+20:25:07.773 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+20:25:07.773 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/ProjectData (PostgreSQL 9.3)
+</system-out>
+  </testcase>
+</testsuite>

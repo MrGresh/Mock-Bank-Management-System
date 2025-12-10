@@ -1,0 +1,1 @@
+ALTER table bank drop column balance;
