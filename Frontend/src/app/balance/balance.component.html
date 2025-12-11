@@ -1,19 +1,26 @@
-
-<div fxLayoutAlign="center center" fxFlexFill class="main-div" style="background-color: #a8dadc;border-radius: 4px;" style="background-image: url(https://valuementor.com/wp-content/uploads/2022/10/Top-10-security-threats-in-digital-banking-and-how-to-defend-against-them.webp);background-repeat: no-repeat;background-size: cover;">
-    <mat-card fxFlex="50" style="text-align: center;border-radius: 60px;">
-        <div>
-            <h1  style="background-color:#e63946;border-bottom: 1px solid black;text-align: center;padding: 10px;color: white;">Hello, <i>{{getName()}}</i></h1>
-        </div><br><br>
-        <div>
-            <h1><span style="background-color: #38b000;color: white;padding: 20px;border-radius: 500%;">Rs. <b>{{balance}}</b> /-</span><br></h1>
-        </div><br>
-        <div>
-            <h2><b>Balance Fetched Successfully</b></h2>
-        <div style="text-align: center;margin: 10px;">
-            <span style="margin:10px;color: white;height: 10px;"><button type="button" mat-raised-button style="border: 1px solid black;background-color: #e63946;color: white;border-radius: 2px;padding: 10px;border-radius: 10px;margin: 10px;" (click)="back()">Back</button></span>
+<div class="balance-container" fxLayoutAlign="center center" fxFlexFill>
+  <mat-card>
+    <div class="balance-header">
+      <h1>Account Balance</h1>
+      <p class="greeting">Hello, <strong>{{getName()}}</strong></p>
+    </div>
+    
+    <div class="balance-content">
+      <p class="balance-label">Your Current Balance</p>
+      
+      <div class="balance-amount">
+        <div class="balance-amount-value">
+          Rs. <strong>{{balance}}</strong> <span class="balance-currency">/-</span>
         </div>
-        </div>
+      </div>
 
+      <p class="success-message">Balance Fetched Successfully</p>
 
-    </mat-card>
+      <div class="balance-actions">
+        <button type="button" class="btn-back" (click)="back()" mat-raised-button>
+          Back to Dashboard
+        </button>
+      </div>
+    </div>
+  </mat-card>
 </div>

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  min-height: 100vh;
+}
+
+.balance-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+}
+
+mat-card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.balance-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 3px solid #06b6d4;
+}
+
+.balance-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.greeting {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.greeting strong {
+  font-weight: 700;
+}
+
+.balance-content {
+  padding: 50px 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.balance-label {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.balance-amount {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+}
+
+.balance-amount-value {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.balance-currency {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.balance-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-back {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+}
+
+.btn-back:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .balance-container {
+    padding: 15px;
+  }
+
+  mat-card {
+    max-width: 100%;
+  }
+
+  .balance-header {
+    padding: 25px;
+  }
+
+  .balance-header h1 {
+    font-size: 22px;
+  }
+
+  .balance-content {
+    padding: 40px 25px;
+  }
+
+  .balance-amount {
+    padding: 30px 20px;
+  }
+
+  .balance-amount-value {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .balance-container {
+    padding: 10px;
+  }
+
+  .balance-header {
+    padding: 20px;
+  }
+
+  .balance-header h1 {
+    font-size: 20px;
+  }
+
+  .greeting {
+    font-size: 14px;
+  }
+
+  .balance-content {
+    padding: 30px 20px;
+  }
+
+  .balance-amount {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+  }
+
+  .balance-amount-value {
+    font-size: 36px;
+  }
+
+  .balance-currency {
+    font-size: 18px;
+  }
+
+  .balance-label {
+    font-size: 14px;
+  }
+
+  .success-message {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-back {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}

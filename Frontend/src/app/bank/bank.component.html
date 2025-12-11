@@ -1,68 +1,164 @@
-
-
-<div fxLayoutAlign="center center" fxFlexFill>
-    <mat-card fxFlex="100"  style="height: 100%;width: 100%;text-align: center;">
-
-        <h1 color="primary" style="background-color: #e63946;color: white;padding: 10px;">
-            <div> 
-                <span style="text-align: center;">Bank Management System</span> 
-                <span style="text-align: right;padding-left: 850px;" [innerHTML]="defaultName">{{getName()}}</span>
-                <span style="color: white;height: 10px;padding: 10px;"><button type="button" mat-raised-button style="color: blue;border: 1px solid black;background-color: white;color: black;border-radius: 2px;padding: 10px;border-radius: 100px;" (click)="logOut()">Log Out</button></span>
-            </div>
-            <hr>
-            <div >
-                <span >
-                    <span style="padding-left: 0px;"><button type="button" mat-raised-button style="background-color: #1a659e;color: white;border: 1px solid black;border-radius: 100px;" (click)="this.auth.getBalance()">Balance</button></span>
-                    <span style="padding-left: 40px;"><button style="border: 1px solid black;background-color: #1a659e;color: white;border-radius: 100px;" type="button" mat-raised-button (click)="this.auth.getMiniStatement()">Mini Statement</button></span>
-                </span> 
-                <span style="padding-left: 63%;">Account ID : </span><span  [innerHTML]="defaultId"> {{getId()}}</span>
-            </div>
-        </h1>
-        
-        
-        
-        <mat-card style="margin: 20px;border-radius: 30px;background-color: #bde0fe;" >
-            <h1 style="background-color: #1a659e;color: white;border-radius: 30px;text-align: end;"><span style="padding-right: 20%;">Transactions</span><pre style="display: inline;padding-left:10px;"><i style="padding-right: 15px;padding-left: 15px;width: 100%;color: black;background-color: white;border-radius: 30px;border: 1px solid black;width: 100px;">{{this.auth.session}}</i></pre></h1>
-
-            <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="this.auth.DepositForm"  (ngSubmit)="this.auth.deposit()">
-                <pre class="inputStyle"><input class="inputInside" matInput type="number" formControlName="amount" placeholder="Deposit Amount">      <button type="submit" mat-raised-button [disabled]="this.auth.DepositForm.invalid" style="border-radius: 100px;border: 1px solid black;background-color: #1a659e;color: white;">Deposit</button></pre>
-            </form>
+<div class="bank-container" fxFlexFill>
+  
+  <!-- Header Section -->
+  <div class="bank-header">
+    <div class="header-top">
+      <h1 class="bank-title">SecureBank</h1>
+      <div class="user-info">
+        <div class="user-name">Welcome, <strong [innerHTML]="defaultName">{{getName()}}</strong></div>
+        <button type="button" class="logout-btn" (click)="logOut()">Log Out</button>
+      </div>
+    </div>
     
-            <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="this.auth.WithdrawForm" (ngSubmit)="this.auth.withdraw()"> 
-                <pre class="inputStyle"><input class="inputInside" matInput type="number" formControlName="amount" placeholder="Withdraw Amount">     <button type="submit" mat-raised-button [disabled]="this.auth.WithdrawForm.invalid" style="border-radius: 100px;border: 1px solid black;background-color: #1a659e;color: white;">Withdraw</button></pre>
-            </form> 
+    <hr class="header-divider">
     
-            <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="this.auth.PinForm" (ngSubmit)="this.auth.pinChange()">
-                <pre class="inputStyle"><input class="inputInside" matInput type="number" formControlName="pin" placeholder="Enter New Pin">   <button type="submit" [disabled]="this.auth.PinForm.invalid" mat-raised-button style="border-radius: 100px;border: 1px solid black;background-color: #1a659e;color: white;">Pin Change</button></pre>
-            </form>  
-            
-            <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="this.auth.MoneyForm" (ngSubmit)="this.auth.sendMoney(this.auth.MoneyForm.value)">
-                <pre class="inputStyle"><input class="inputInsideS" matInput type="number" formControlName="id" placeholder="Account ID">    <input class="inputInsideS" matInput type="number" formControlName="amount" placeholder="Amount">   <button type="submit" [disabled]="this.auth.MoneyForm.invalid" mat-raised-button style="border-radius: 100px;border: 1px solid black;background-color: #1a659e;color: white;">Send Money</button></pre>
-            </form>
-        </mat-card>
+    <div class="header-bottom">
+      <div class="nav-buttons">
+        <button type="button" class="nav-btn" (click)="this.auth.getBalance()">View Balance</button>
+        <button type="button" class="nav-btn" (click)="this.auth.getMiniStatement()">Transaction History</button>
+      </div>
+      <div class="account-display">
+        <strong>Account ID:</strong> <span [innerHTML]="defaultId">{{getId()}}</span>
+      </div>
+    </div>
+  </div>
 
-        <mat-card style="background-color: #84a59d;height: 100%;margin-top: 20px;">
-            <h1 style="color: white;background-color: black;">Contact Us :</h1>
-            
-                <h1 style="background-color: white;border-radius: 30px;margin-left: 20px;margin-right: 20px;">
-                    <a href="https://www.linkedin.com/in/mrgresh" target="_blank" style="color: blue;"><fa-icon [icon]="icon2" ></fa-icon></a> 
-                    <span style="padding-left: 1%;padding-right: 1%;">|</span> 
-                    <a href="https://github.com/MrGresh" target="_blank" style="color: black;"><fa-icon [icon]="icon1" ></fa-icon></a>
-                    <span style="padding-left: 1%;padding-right: 1%;">|</span>
-                    <a>gresh@myanatomy.in</a>
-                    <span style="padding-left: 1%;padding-right: 1%;">|</span>
-                    <a><fa-icon [icon]="icon3" ></fa-icon> +91 7206299229</a>
-                    <span style="padding-left: 1%;padding-right: 1%;">|</span>
-                    <a>{{currentTime}}</a>
-                </h1>
-            
-        </mat-card>
+  <!-- Transactions Section -->
+  <mat-card>
+    <div class="card-header">
+      Transactions
+      <span class="session-badge">{{this.auth.session}}</span>
+    </div>
     
-    </mat-card>
-    
-    
+    <div class="card-content">
+      <!-- Deposit Form -->
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 15px; color: #1f2937; font-size: 16px;">Deposit Funds</h3>
+        <form [formGroup]="this.auth.DepositForm" (ngSubmit)="this.auth.deposit()" class="transaction-form">
+          <div class="form-input">
+            <label for="depositAmount">Amount</label>
+            <input 
+              id="depositAmount"
+              type="number" 
+              formControlName="amount" 
+              placeholder="Enter amount to deposit"
+              matInput>
+          </div>
+          <button 
+            type="submit" 
+            class="transaction-btn"
+            [disabled]="this.auth.DepositForm.invalid"
+            mat-raised-button>
+            Deposit
+          </button>
+        </form>
+      </div>
+
+      <!-- Withdraw Form -->
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 15px; color: #1f2937; font-size: 16px;">Withdraw Funds</h3>
+        <form [formGroup]="this.auth.WithdrawForm" (ngSubmit)="this.auth.withdraw()" class="transaction-form">
+          <div class="form-input">
+            <label for="withdrawAmount">Amount</label>
+            <input 
+              id="withdrawAmount"
+              type="number" 
+              formControlName="amount" 
+              placeholder="Enter amount to withdraw"
+              matInput>
+          </div>
+          <button 
+            type="submit" 
+            class="transaction-btn"
+            [disabled]="this.auth.WithdrawForm.invalid"
+            mat-raised-button>
+            Withdraw
+          </button>
+        </form>
+      </div>
+
+      <!-- PIN Change Form -->
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 15px; color: #1f2937; font-size: 16px;">Change PIN</h3>
+        <form [formGroup]="this.auth.PinForm" (ngSubmit)="this.auth.pinChange()" class="transaction-form">
+          <div class="form-input">
+            <label for="newPin">New PIN</label>
+            <input 
+              id="newPin"
+              type="number" 
+              formControlName="pin" 
+              placeholder="Enter new PIN"
+              matInput>
+          </div>
+          <button 
+            type="submit" 
+            class="transaction-btn"
+            [disabled]="this.auth.PinForm.invalid"
+            mat-raised-button>
+            Change PIN
+          </button>
+        </form>
+      </div>
+
+      <!-- Send Money Form -->
+      <div>
+        <h3 style="margin-bottom: 15px; color: #1f2937; font-size: 16px;">Send Money</h3>
+        <form [formGroup]="this.auth.MoneyForm" (ngSubmit)="this.auth.sendMoney(this.auth.MoneyForm.value)" class="transaction-form">
+          <div class="form-input">
+            <label for="recipientId">Recipient Account ID</label>
+            <input 
+              id="recipientId"
+              type="number" 
+              formControlName="id" 
+              placeholder="Enter recipient account ID"
+              matInput>
+          </div>
+          <div class="form-input">
+            <label for="sendAmount">Amount</label>
+            <input 
+              id="sendAmount"
+              type="number" 
+              formControlName="amount" 
+              placeholder="Enter amount"
+              matInput>
+          </div>
+          <button 
+            type="submit" 
+            class="transaction-btn"
+            [disabled]="this.auth.MoneyForm.invalid"
+            mat-raised-button>
+            Send Money
+          </button>
+        </form>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <h2 class="contact-header">Contact Us</h2>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/mrgresh" target="_blank" class="contact-link">
+        <fa-icon [icon]="icon2"></fa-icon> LinkedIn
+      </a>
+      <span class="contact-divider">|</span>
+      <a href="https://github.com/MrGresh" target="_blank" class="contact-link">
+        <fa-icon [icon]="icon1"></fa-icon> GitHub
+      </a>
+      <span class="contact-divider">|</span>
+      <a class="contact-link">
+        <span>gresh@myanatomy.in</span>
+      </a>
+      <span class="contact-divider">|</span>
+      <a class="contact-link">
+        <fa-icon [icon]="icon3"></fa-icon> +91 7206299229
+      </a>
+      <span class="contact-divider">|</span>
+      <span class="contact-link">{{currentTime}}</span>
+    </div>
+  </div>
+
 </div>
-
 
 
 

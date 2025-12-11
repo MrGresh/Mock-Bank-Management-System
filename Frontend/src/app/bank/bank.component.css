@@ -1,39 +1,344 @@
-body{
-    background-color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* div mat-card {
-    border: 1px solid black;
-} */
-
-.inputStyle{
-    /* text-align: center; */
-    margin: 20px;
-    padding-left: 29px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
 }
 
-.inputInside{
-    border: 1px solid black;
-    border-radius: 100px;
-    height: 29px;
-    width: 30%;
-    text-align: center;
+.bank-container {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.inputInsideS{
-    border: 1px solid black;
-    border-radius: 2px;
-    height: 29px;
-    text-align: center;
-    border-radius: 100px;
+/* Header Styles */
+.bank-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
+.bank-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
 
+.user-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  
-  
-  
-  
-  
-  
+.user-name {
+  font-size: 16px;
+}
+
+.logout-btn {
+  background-color: white;
+  color: #1e3a8a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-divider {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 15px 0;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+.account-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* Main Content Area */
+mat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-badge {
+  background-color: white;
+  color: #1e3a8a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+/* Form Styles */
+.transaction-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.form-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-input label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-input input:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.form-input input::placeholder {
+  color: #9ca3af;
+}
+
+.transaction-btn {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.transaction-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.transaction-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer/Contact Section */
+.contact-section {
+  background-color: #1f2937;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #06b6d4;
+}
+
+.contact-divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-form {
+    flex-direction: column;
+  }
+
+  .form-input {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bank-container {
+    padding: 15px;
+  }
+
+  .bank-header {
+    padding: 15px;
+  }
+
+  .bank-title {
+    font-size: 22px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+  }
+
+  .nav-btn {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .contact-links {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bank-container {
+    padding: 10px;
+  }
+
+  .bank-header {
+    padding: 15px 10px;
+  }
+
+  .bank-title {
+    font-size: 18px;
+  }
+
+  .card-header {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .transaction-form {
+    gap: 8px;
+  }
+
+  .form-input input {
+    font-size: 16px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-divider {
+    display: none;
+  }
+}

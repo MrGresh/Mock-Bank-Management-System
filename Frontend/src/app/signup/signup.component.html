@@ -1,56 +1,189 @@
-<div fxLayoutAlign="center" class="mainDiv">
-    <mat-card fxFlex="40" style="margin: 20px;text-align: center;">
-        <h1 id="HeaderStyle">Sign Up</h1>
-        <form style="background-color: white;padding: 20px;"  fxLayoutAlign="stretch" fxLayout="column" [formGroup]="signupForm" (ngSubmit)="signUp()">
-            
-                
-                <input class="inputStyle" matInput type="text" formControlName="name" placeholder="Name" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="name.invalid && name.touched">At least 3 Characters of Name is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="date" formControlName="dob" placeholder="dd-mm-yyyy" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="dob.invalid && dob.touched">DOB  is required</div><br><br>
-            
-                <span style="text-align: center;">Gender : 
-                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Male" required>Male</span>
-                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Female" required>Female</span>
-                    <span style="text-align: center;"><input style="text-align: center;width: 40px;" matInput type="radio" formControlName="gender" value="Other" required>Other</span>
-                </span>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="gender.invalid && gender.touched">Gender is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="email" formControlName="email" placeholder="Email" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="email.invalid && email.touched">Email is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="text" formControlName="address" placeholder="Address" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="address.invalid && address.touched">At least 3 Characters of Address is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="number" formControlName="pincode" placeholder="Pincode" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pincode.invalid && pincode.touched">Valid Pincode is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="text" formControlName="city" placeholder="City" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="city.invalid && city.touched">At least 3 Characters of City is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="text" formControlName="state" placeholder="State" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="state.invalid && state.touched">At least 3 Characters of State is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="number" formControlName="card" placeholder="login id" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="card.invalid && card.touched">16 digit login id Number is required</div><br><br>
-            
-                <input class="inputStyle" matInput type="number" formControlName="pin" placeholder="Pin" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pin.invalid && pin.touched">8 digit Pin is required</div><br><br>
-            
-            
-                <input class="inputStyle" matInput type="text" formControlName="pan" placeholder="Pan Card" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="pan.invalid && pan.touched">Valid Pan Card is required</div><br><br>
-            
-            
-                <input class="inputStyle" matInput type="number" formControlName="aadhar" placeholder="Aadhar" required>
-                <div class="form-text-text-danger" style="margin-left: 50px;" *ngIf="aadhar.invalid && aadhar.touched">Valid Aadhar is required</div><br><br>
+<div class="signup-main" fxLayoutAlign="center center">
+  <mat-card>
+    <div class="signup-header">Sign Up</div>
+    
+    <form class="signup-form" fxLayout="column" [formGroup]="signupForm" (ngSubmit)="signUp()">
+      
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input 
+          id="name"
+          type="text" 
+          formControlName="name" 
+          placeholder="Enter your full name"
+          matInput>
+        <div class="error-message" *ngIf="name.invalid && name.touched">
+          Name must be at least 3 characters
+        </div>
+      </div>
 
-                <input class="inputStyle" matInput type="checkbox" formControlName="gresh">
-                <b style="text-align: center;">I am ready to go.</b><br><br>
-            
-               <pre style="text-align: center;"><span style="color: white;height: 10px;padding: 10px;"><button type="button" mat-raised-button style="background-color: #e63946;color: white;border: 1px solid black;" (click)="back()">Back</button></span>               <button [disabled]="signupForm.invalid" style="background-color: #e63946;color: white;border: 1px solid black;" mat-raised-button type="submit" >Submit Details</button></pre>
-               
-        </form>
-    </mat-card>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input 
+          id="dob"
+          type="date" 
+          formControlName="dob"
+          matInput>
+        <div class="error-message" *ngIf="dob.invalid && dob.touched">
+          Date of birth is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" formControlName="gender" value="Male"> Male
+          </label>
+          <label>
+            <input type="radio" formControlName="gender" value="Female"> Female
+          </label>
+          <label>
+            <input type="radio" formControlName="gender" value="Other"> Other
+          </label>
+        </div>
+        <div class="error-message" *ngIf="gender.invalid && gender.touched">
+          Gender is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input 
+          id="email"
+          type="email" 
+          formControlName="email" 
+          placeholder="Enter your email"
+          matInput>
+        <div class="error-message" *ngIf="email.invalid && email.touched">
+          Valid email is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea 
+          id="address"
+          formControlName="address" 
+          placeholder="Enter your address"
+          rows="3"
+          matInput></textarea>
+        <div class="error-message" *ngIf="address.invalid && address.touched">
+          Address must be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input 
+          id="city"
+          type="text" 
+          formControlName="city" 
+          placeholder="Enter your city"
+          matInput>
+        <div class="error-message" *ngIf="city.invalid && city.touched">
+          City must be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input 
+          id="state"
+          type="text" 
+          formControlName="state" 
+          placeholder="Enter your state"
+          matInput>
+        <div class="error-message" *ngIf="state.invalid && state.touched">
+          State must be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pincode">Pincode</label>
+        <input 
+          id="pincode"
+          type="number" 
+          formControlName="pincode" 
+          placeholder="Enter pincode"
+          matInput>
+        <div class="error-message" *ngIf="pincode.invalid && pincode.touched">
+          Valid pincode is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="card">Login ID</label>
+        <input 
+          id="card"
+          type="number" 
+          formControlName="card" 
+          placeholder="16-digit login ID"
+          matInput>
+        <div class="error-message" *ngIf="card.invalid && card.touched">
+          16-digit login ID is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pin">PIN</label>
+        <input 
+          id="pin"
+          type="number" 
+          formControlName="pin" 
+          placeholder="8-digit PIN"
+          matInput>
+        <div class="error-message" *ngIf="pin.invalid && pin.touched">
+          8-digit PIN is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pan">PAN Card</label>
+        <input 
+          id="pan"
+          type="text" 
+          formControlName="pan" 
+          placeholder="Enter PAN card"
+          matInput>
+        <div class="error-message" *ngIf="pan.invalid && pan.touched">
+          Valid PAN card is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="aadhar">Aadhar Number</label>
+        <input 
+          id="aadhar"
+          type="number" 
+          formControlName="aadhar" 
+          placeholder="Enter Aadhar"
+          matInput>
+        <div class="error-message" *ngIf="aadhar.invalid && aadhar.touched">
+          Valid Aadhar is required
+        </div>
+      </div>
+
+      <div class="checkbox-group">
+        <input 
+          id="terms"
+          type="checkbox" 
+          formControlName="gresh">
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-back" (click)="back()" mat-raised-button>
+          Back
+        </button>
+        <button 
+          type="submit" 
+          class="btn-submit" 
+          [disabled]="signupForm.invalid"
+          mat-raised-button>
+          Submit
+        </button>
+      </div>
+    </form>
+  </mat-card>
 </div>

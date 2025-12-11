@@ -1,45 +1,53 @@
-<!-- <div fxLayoutAlign="center center" fxFlexFill class="main-div" style="background-color: #a8dadc;border-radius: 4px;margin: 20px;"> -->
+<div class="ministatement-container" fxFlexFill>
+  <mat-card>
+    <div class="statement-header">
+      <h1>Transaction History</h1>
+      <p class="greeting">Hello, <strong>{{getName()}}</strong></p>
+    </div>
     
+    <div class="statement-content">
+      <div class="table-wrapper">
+        <table *ngIf="res && res.length > 0" border="1">
+          <thead>
+            <tr>
+              <th>Account ID</th>
+              <th>Transaction ID</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of res">
+              <td>{{items.userId}}</td>
+              <td>{{items.id}}</td>
+              <td>{{items.date}}</td>
+              <td>
+                <span class="transaction-type" [ngClass]="items.type.toLowerCase()">
+                  {{items.type}}
+                </span>
+              </td>
+              <td class="amount" [ngClass]="items.type === 'Deposit' || items.type === 'Received' ? 'positive' : 'negative'">
+                Rs. {{items.amount}} /-
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="no-transactions" *ngIf="!res || res.length === 0">
+          <p>No transactions found</p>
+        </div>
+      </div>
 
-    <div   style="background-color: #a8dadc;background-image: url(https://valuementor.com/wp-content/uploads/2022/10/Top-10-security-threats-in-digital-banking-and-how-to-defend-against-them.webp);background-repeat: no-repeat;background-size: cover;"> 
-        <mat-card fxFlex="500" style="border-radius: 50px;margin: 166px;">
-    
-            <h1  style="background-color:#e63946;border-bottom: 1px solid black;text-align: center;padding: 10px;color: white;">Hello, <i>{{getName()}}</i><hr>Transaction History</h1>
-            
-                <table border="1px solid black" style="margin: 20px;border-collapse:collapse ;">
-                        <thead>
-                            <tr>
-                                <th class="styleInput">Account ID</th>
-                                <th class="styleInput">Transection ID</th>
-                                <th class="styleInput">Date</th>
-                                <th class="styleInput">Type</th>
-                                <th class="styleInput">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let items of res">
-                
-                                <td class="styleInput">{{items.userId}}</td>
-                                <td class="styleInput">{{items.id}}</td>
-                                <td class="styleInput">{{items.date}}</td>
-                                <td class="styleInput">{{items.type}}</td>
-                                <td class="styleInput">{{items.amount}}</td>
-                                
-                                
-                            </tr>
-                        </tbody>
-                        
-                    </table>
-                    <div>
-                        <h1 style="text-align: center;"><b >{{title}}</b></h1>
-                    </div>
-                    <div style="text-align: center;margin: 10px;">
-                        <span style="margin:10px;color: white;height: 10px;"><button type="button" mat-raised-button style="border: 1px solid black;background-color: #e63946;color: white;border-radius: 2px;padding: 10px;border-radius: 10px;margin: 10px;" (click)="back()">Back</button></span>
-                    </div> 
+      <div class="status-message">
+        <strong>{{title}}</strong>
+      </div>
 
-        </mat-card>
-    
+      <div class="actions">
+        <button type="button" class="btn-back" (click)="back()" mat-raised-button>
+          Back to Dashboard
+        </button>
+      </div>
+    </div>
+  </mat-card>
 </div>
-
-
-<!-- </div> -->

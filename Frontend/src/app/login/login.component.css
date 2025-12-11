@@ -1,52 +1,198 @@
-/* .main-div mat-card{
-    padding: 0px;
-    border: 1px solid black;
-} */
-
-
-.main-div mat-card mat-toolbar{
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.login-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.login-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 300;
+}
 
 .login-form {
-    padding: 20px;
+  padding: 40px 30px;
+  background-color: #ffffff;
 }
 
-.header-div mat-card h1{
-    color: blue;
-    margin:10px;
-    padding: 10px;
+.form-group {
+  margin-bottom: 24px;
 }
 
-.header-div mat-card {
-    margin-top: 30px;
-    
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
 }
 
-#matcard{
-    background-color: white;
-    border-radius: 50px;
-    margin: 20px;
+.form-group input,
+.form-group mat-form-field {
+  width: 100%;
 }
 
-.matinputs{
-    background-color: white;
-    border-radius: 100px;
-    text-align: center;
-    height: 30px;
-    
+mat-form-field {
+  width: 100% !important;
 }
 
-.form-text-text-danger{
-    color: red;
+::ng-deep .mat-mdc-form-field {
+  width: 100%;
 }
 
+::ng-deep .mat-mdc-text-field-wrapper {
+  padding-bottom: 0;
+}
 
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
 
+.form-group input:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
 
+.form-group input::placeholder {
+  color: #9ca3af;
+}
 
+.btn-submit {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-     
-    
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.signup-link p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-link a {
+  color: #06b6d4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #0891b2;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-header {
+    padding: 30px 20px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+
+  .login-form {
+    padding: 30px 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-card {
+    max-width: 100%;
+  }
+
+  .login-header {
+    padding: 25px 15px;
+  }
+
+  .login-header h1 {
+    font-size: 22px;
+  }
+
+  .login-form {
+    padding: 25px 15px;
+  }
+
+  .form-group input {
+    font-size: 16px;
+  }
+}
