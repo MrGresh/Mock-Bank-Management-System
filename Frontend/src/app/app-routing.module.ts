@@ -11,7 +11,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"bank",component:BankComponent},
   {path:"MiniStatement",component:MinistatementComponent},
-  {path:"BankBalance",component:BalanceComponent}
+  {path:"BankBalance",component:BalanceComponent},
+  {path:"",redirectTo:"/login",pathMatch:"full"}
 ];
 
 @NgModule({
