@@ -1,7 +1,14 @@
 # 🏦 Mock Bank Management System
 
-Mock Bank Management System featuring deposit/withdrawal operations, real-time balance checks, money
-transfers, and a statement page for transaction history
+• Developed a full-stack banking application using Angular for the frontend, Java Ninja framework for backend services, and SQL/Postgres for data persistence.
+
+• Implemented core banking functionalities including deposit, withdrawal, fund transfer, balance inquiry, and mini-statement generation, ensuring a realistic simulation of banking workflows.
+
+• Designed a modular backend architecture to handle transaction validation, error handling, and secure data operations, improving reliability and maintainability.
+
+• Built a responsive Angular-based user interface with intuitive navigation, enabling users to perform transactions seamlessly.
+
+• Optimized database schema and queries in Postgres to support efficient transaction processing and accurate record-keeping.
 
 # 🛠️ Tech Stack
 <p align="left"> 
